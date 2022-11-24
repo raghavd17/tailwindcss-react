@@ -1,0 +1,79 @@
+@tailwind components;
+
+@layer components {
+    .list {
+        @apply p-2;
+
+        :where([data-item='group']) {
+            @apply flex items-center gap-2;
+            --gap: theme('spacing.2');
+            gap: var(--gap);
+        }
+
+        &-item {
+            @apply p-2 px-3 hover:bg-primary-200;
+
+            &[data-state="active"] {
+                @apply bg-primary-100;
+            }
+
+            &:hover {
+                .item-checkbox:not([data-state='active']) {
+                    --bg: theme('colors.primary.500');
+                    --color: theme('colors.white');
+                }
+            }
+        }
+
+        // list-item
+        &-divider {
+            @apply border-neutral-300 border-b my-3;
+        }
+
+        &-title {
+            @apply text-ellipsis overflow-hidden whitespace-nowrap flex-grow;
+        }
+
+        &-label {
+            --gap: theme('spacing.1');
+            @apply text-[85%];
+        }
+
+        // list-label 
+    }
+
+    // .list end 
+    .item-checkbox {
+        &:has(svg) {
+            @apply aspect-square;
+
+            & svg {
+                @apply aspect-square text-transparent w-[1em];
+            }
+        }
+
+        --bg:theme('colors.primary.200');
+        --color:theme('colors.primary.600');
+        background:var(--bg);
+        color: var(--color);
+        @apply p-1 py-[2px] min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
+
+        &:hover {
+            --bg: theme('colors.primary.500');
+            --color: theme('colors.white');
+        }
+
+        &[data-state='active'] {
+            --bg: theme('colors.primary.900');
+            --color: theme('colors.white');
+
+            & svg {
+                @apply text-inherit;
+            }
+        }
+    }
+
+    // .item-checkbox
+
+
+}
