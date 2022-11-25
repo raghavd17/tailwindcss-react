@@ -33,6 +33,7 @@
         &-title {
             @apply text-ellipsis overflow-hidden whitespace-nowrap flex-grow;
         }
+        
 
         &-label {
             --gap: theme('spacing.1');
@@ -43,35 +44,43 @@
     }
 
     // .list end 
-    .item-checkbox {
-        &:has(svg) {
-            @apply aspect-square;
+    .item {
+        &-link {
+            @apply block hover:text-primary-500;
+        }
+        // item-link end 
 
-            & svg {
-                @apply aspect-square text-transparent w-[1em];
+        &-checkbox {
+            &:has(svg) {
+                @apply aspect-square;
+    
+                & svg {
+                    @apply aspect-square text-transparent w-[1em];
+                }
             }
-        }
-
-        --bg:theme('colors.primary.200');
-        --color:theme('colors.primary.600');
-        background:var(--bg);
-        color: var(--color);
-        @apply p-1 py-[2px] min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
-
-        &:hover {
-            --bg: theme('colors.primary.500');
-            --color: theme('colors.white');
-        }
-
-        &[data-state='active'] {
-            --bg: theme('colors.primary.900');
-            --color: theme('colors.white');
-
-            & svg {
-                @apply text-inherit;
+    
+            --bg:theme('colors.primary.200');
+            --color:theme('colors.primary.600');
+            background:var(--bg);
+            color: var(--color);
+            @apply p-1 py-[2px] min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
+    
+            &:hover {
+                --bg: theme('colors.primary.500');
+                --color: theme('colors.white');
+            }
+    
+            &[data-state='active'] {
+                --bg: theme('colors.primary.900');
+                --color: theme('colors.white');
+    
+                & svg {
+                    @apply text-inherit;
+                }
             }
         }
     }
+    
 
     // .item-checkbox
 

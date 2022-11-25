@@ -1,5 +1,5 @@
-@import './styles/reset';
-@import './styles/utilities/utilities-dir';
+@use './styles/reset' as *;
+@use './styles/utilities/utilities-dir' as *;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

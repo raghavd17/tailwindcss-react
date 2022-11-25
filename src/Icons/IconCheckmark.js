@@ -1,5 +1,5 @@
 
-const Checkmark = (props) => (
+const IconCheckmark = (props) => (
   <svg
     fill="none"
     height=""
@@ -17,4 +17,4 @@ const Checkmark = (props) => (
   </svg>
 );
 
-export default Checkmark;
+export default IconCheckmark;

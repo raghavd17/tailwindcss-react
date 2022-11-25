@@ -1,0 +1,97 @@
+@tailwind components;
+@layer components {
+    .button {
+        &.lg {
+            @apply text-lg;
+          }
+        &.xl {
+            @apply text-xl;
+          }
+          &.xxl {
+            @apply text-2xl;
+          }
+      @apply p-1 px-3 bg-transparent transition-all text-sm focus:outline-1 border flex-none;
+      
+      @apply border-none text-primary-600;
+    @apply hover:text-primary-400 hover:bg-primary-200;
+      &:has(svg:only-child){
+        @apply p-1;
+        > svg {
+            @apply aspect-square  w-[1em];
+        }
+      }
+      &.rounded {
+        @apply rounded-full;
+      }
+      
+    //   &+& {
+    //     @apply ml-2;
+    //   }
+  
+      &[data-btn-type='primary'] {
+        @apply bg-primary-700 text-white;
+        @apply hover:bg-primary-500;
+        @apply focus:bg-primary-900 active:bg-primary-900 disabled:bg-primary-500/80;
+      }
+      &[data-btn-type='action'] {
+        @apply bg-action-400 text-white;
+        @apply hover:bg-action-200;
+        @apply focus:bg-primary-900 active:bg-primary-900;
+      }
+  
+      &[data-btn-type='action-success'] {
+        @apply bg-success-900 text-white;
+        @apply hover:bg-success-500;
+      }
+      &[data-btn-type='action-attention'] {
+        @apply bg-attention-900 text-white;
+        @apply hover:bg-attention-500;
+      }
+  
+      &[data-btn-type='action-danger'] {
+        @apply bg-error-900 text-white;
+        @apply hover:bg-error-500;
+      }
+      
+  
+      &[data-btn-type='danger'] {
+        @apply text-error-900;
+        @apply hover:text-error-500 hover:bg-error-100;
+      }
+  
+      &[data-btn-type='success'] {
+        @apply text-success-900;
+        @apply hover:text-success-500 hover:bg-success-100;
+      }
+  
+      &[data-btn-type='attention'] {
+        @apply text-attention-900;
+        @apply hover:text-attention-500 hover:bg-attention-100;
+      }
+  
+      &[data-btn-type*='link'] {
+        @apply shadow-none bg-transparent underline underline-offset-4 text-primary-600;
+        @apply hover:text-primary-600 hover:outline-offset-8;
+      }
+  
+      &[data-btn-type*='link-danger'] {
+        @apply text-error-500;
+        @apply hover:text-error-900;
+      }
+  
+      &[data-btn-type*='link-success'] {
+        @apply text-success-200;
+        @apply hover:text-success-500;
+      }
+  
+      &[data-btn-type*='link-warning'] {
+        @apply text-attention-500;
+        @apply hover:text-attention-900;
+      }
+  
+    }
+  
+    // .button end 
+  
+  
+  }
