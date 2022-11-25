@@ -1,93 +1,198 @@
 @tailwind components;
 @layer components {
     .button {
-        &.lg {
-            @apply text-lg;
-          }
-        &.xl {
-            @apply text-xl;
-          }
-          &.xxl {
-            @apply text-2xl;
-          }
-      @apply p-1 px-3 bg-transparent transition-all text-sm focus:outline-1 border flex-none;
       
-      @apply border-none text-primary-600;
-    @apply hover:text-primary-400 hover:bg-primary-200;
-      &:has(svg:only-child){
-        @apply p-1;
-        > svg {
-            @apply aspect-square  w-[1em];
+        @apply p-1 px-3 rounded bg-transparent transition-all text-sm focus:outline-1 border inline-flex place-content-center place-items-center gap-1;
+        @apply border-none text-primary-600;
+        @apply hover:text-primary-400 hover:bg-primary-200 hover:shadow-md;
+        &:disabled{
+            @apply opacity-25 pointer-events-none;
         }
-      }
-      &.rounded {
-        @apply rounded-full;
-      }
-      
-    //   &+& {
-    //     @apply ml-2;
-    //   }
-  
-      &[data-btn-type='primary'] {
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-primary-400 bg-primary-200 shadow-md;
+            > svg {
+              @apply origin-center rotate-180;
+              
+            }
+          }
+        }
+      &[data-button='primary'] {
         @apply bg-primary-700 text-white;
         @apply hover:bg-primary-500;
-        @apply focus:bg-primary-900 active:bg-primary-900 disabled:bg-primary-500/80;
+    
+        &:where(&:active, &.active, &:focus) {
+            @apply bg-primary-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-primary-900 text-white;
+          }
+        }
       }
-      &[data-btn-type='action'] {
+      &[data-button='action'] {
         @apply bg-action-400 text-white;
-        @apply hover:bg-action-200;
-        @apply focus:bg-primary-900 active:bg-primary-900;
+        @apply hover:bg-action-300;
+
+        
+        &:where(:active, .active, :focus) {
+            @apply bg-action-600;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-action-600 text-white;
+          }
+        }
+        
       }
   
-      &[data-btn-type='action-success'] {
-        @apply bg-success-900 text-white;
-        @apply hover:bg-success-500;
+      &[data-button='action-success'] {
+        @apply bg-success-500 text-white;
+        
+        &:where(:active, .active, :focus) {
+            @apply bg-success-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-success-900 text-white;
+          }
+        }
       }
-      &[data-btn-type='action-attention'] {
-        @apply bg-attention-900 text-white;
-        @apply hover:bg-attention-500;
+      &[data-button='action-warning'] {
+        @apply bg-attention-500 text-white;
+        &:where(:active, .active, :focus) {
+            @apply bg-attention-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-attention-900 text-white;
+          }
+        }
       }
   
-      &[data-btn-type='action-danger'] {
-        @apply bg-error-900 text-white;
-        @apply hover:bg-error-500;
+      &[data-button='action-danger'] {
+        @apply bg-error-500 text-white;
+        
+        &:where(:active, .active, :focus) {
+            @apply bg-error-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-error-900 text-white;
+          }
+        }
       }
       
   
-      &[data-btn-type='danger'] {
-        @apply text-error-900;
-        @apply hover:text-error-500 hover:bg-error-100;
+      &[data-button='danger'] {
+        @apply text-error-500;
+        @apply hover:text-error-900 hover:bg-error-100;
+
+        &:where(:active, .active, :focus) {
+            @apply text-error-900 bg-error-100;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-error-100 text-error-900;
+          }
+        }
       }
   
-      &[data-btn-type='success'] {
-        @apply text-success-900;
-        @apply hover:text-success-500 hover:bg-success-100;
+      &[data-button='success'] {
+        @apply text-success-500;
+        @apply hover:text-success-900 hover:bg-success-100;
+        &:where(:active, .active, :focus) {
+            @apply text-success-900 bg-success-100;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-success-900 bg-success-100;
+          }
+        }
       }
   
-      &[data-btn-type='attention'] {
-        @apply text-attention-900;
-        @apply hover:text-attention-500 hover:bg-attention-100;
+      &[data-button='warning'] {
+        @apply text-attention-500;
+        @apply hover:text-attention-900 hover:bg-attention-100;
+        &:where(:active, .active, :focus) {
+            @apply text-attention-900 bg-attention-100;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-attention-900 bg-attention-100;
+          }
+        }
       }
   
-      &[data-btn-type*='link'] {
-        @apply shadow-none bg-transparent underline underline-offset-4 text-primary-600;
-        @apply hover:text-primary-600 hover:outline-offset-8;
+      &[data-button*='link'] {
+        @apply shadow-none bg-transparent text-primary-600;
+        @apply  hover:underline  hover:underline-offset-8 hover:outline-primary-400;
+        &:where(:active, .active, :focus) {
+            @apply text-primary-600 underline underline-offset-8 outline-primary-400;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-primary-600 underline underline-offset-8 outline-primary-400 bg-none;
+          }
+        }
       }
   
-      &[data-btn-type*='link-danger'] {
+      &[data-button*='link-danger'] {
         @apply text-error-500;
         @apply hover:text-error-900;
+        &:where(:active, .active, :focus) {
+            @apply text-error-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply  text-error-900;
+          }
+        }
       }
   
-      &[data-btn-type*='link-success'] {
-        @apply text-success-200;
-        @apply hover:text-success-500;
+      &[data-button*='link-success'] {
+        @apply text-success-500;
+        @apply hover:text-success-900;
+        &:where(:active, .active, :focus) {
+            @apply text-success-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply  text-success-900;
+          }
+        }
       }
   
-      &[data-btn-type*='link-warning'] {
+      &[data-button*='link-warning'] {
         @apply text-attention-500;
         @apply hover:text-attention-900;
+        &:where(:active, .active, :focus) {
+            @apply text-attention-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply  text-attention-900;
+          }
+        }
       }
+        &.xs {
+            @apply text-xs;
+        }
+        &.lg {
+            @apply text-lg;
+        }
+        &.xl {
+            @apply text-xl;
+        }
+        &.xxl {
+            @apply text-2xl;
+        }
+        &.icon {
+            @apply p-0 aspect-square w-fit min-w-[1.6667em] grid place-content-center place-items-center;
+        }
+        &.round {
+            @apply rounded-full;
+        }
   
     }
   

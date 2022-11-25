@@ -2,21 +2,24 @@
 
 @layer components {
     .dropdown {
+        &[data-state="open"] {
+           @apply outline outline-neutral-100; 
+        }
+        --top: 100%;
+        --right: auto;
+        --min-width: 14rem;
+        --bg: theme('colors.white');
+        --radius: theme('borderRadius.sm');  
         @apply relative;
-
+        
         &>&-menu {
-            --width: 20rem;
-            --bg: theme('colors.white');
-            --radius: theme('borderRadius.sm');
-            --top: 100%;
-            --right: auto;
             top: var(--top, initial);
             right: var(--right, initial);
-            left: var(--left, initial);
             bottom: var(--bottom, initial);
-            width: var(--width);
+            left: var(--left, initial);
+            min-width: var(--min-width);
             background: var(--bg);
-            @apply absolute border border-neutral-100 shadow-xl p-2 py-4 rounded hidden z-10;
+            @apply absolute border border-neutral-100 shadow-xl p-2 py-4 rounded hidden z-50;
 
             &[data-state="open"] {
                 @apply block;
