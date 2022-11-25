@@ -104,15 +104,15 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button warning Sizes </h1>
             <div className='cluster items-center'>
-            <button className='btn xs' data-button="warning">xs</button>
-                <button className='btn' data-button="warning">Regular</button>
-                <button className='btn lg' data-button="warning"> lg</button>
+            <button className='btn warning xs'>xs</button>
+                <button className='btn warning'>Regular</button>
+                <button className='btn warning lg'> lg</button>
                 
-                <button className='btn xxl' data-button="warning"> xxl</button>
-                <button className='btn icon lg' data-button="warning">
+                <button className='btn warning xxl'> xxl</button>
+                <button className='btn warning icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn icon xxl' data-button="danger">
+                <button className='btn warning icon xxl'>
                     <IconSearch />
                 </button>
             </div>
@@ -125,16 +125,16 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Danger</h1>
             <div className='cluster items-center'>
-                <button className='btn warning'>Button </button>
-                <button className='btn warning'><IconSearch /> Icon Before </button>
-                <button className='btn warning'>Icon After <IconSearch /></button>
-                <button className='btn warning active'>Active</button>
-                <button className='btn warning' disabled>Disabled</button>
+                <button className='btn danger'>Button </button>
+                <button className='btn danger'><IconSearch /> Icon Before </button>
+                <button className='btn danger'>Icon After <IconSearch /></button>
+                <button className='btn danger active'>Active</button>
+                <button className='btn danger' disabled>Disabled</button>
                 
-                <button className='btn warning icon'>
+                <button className='btn danger icon'>
                     <IconSearch />
                 </button>
-                <button className='btn warning  round icon '>
+                <button className='btn danger round icon '>
                     <IconSearch />
                 </button>
             </div>
@@ -452,7 +452,7 @@ const Button = () => {
                     <IconSearch />
                 </button>
                 
-                <button className='btn icon xxl'>
+                <button className='btn action-success icon xxl'>
                     <IconSearch />
                 </button>
             </div>
@@ -489,7 +489,7 @@ const Button = () => {
                     <IconSearch />
                 </button>
                 
-                <button className='btn icon xxl'>
+                <button className='btn action-warning icon xxl'>
                     <IconSearch />
                 </button>
             </div>

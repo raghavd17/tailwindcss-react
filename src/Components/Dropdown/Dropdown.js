@@ -13,10 +13,14 @@ const Dropdown = () => {
     
     <h2 className='text-red-500 mb-4 text-5xl'>Dropdowns</h2>
     <div className='dropdown test'>
-    <button className='btn primary dropdown-toggle'  data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
+    <button className='btn danger dropdown-toggle'  data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
       <span>Open Dropdown</span>
     <IconsCaretDown />
     </button>
+    {/* <button className='dropdown-toggle'  data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
+      <span>Open Dropdown</span>
+    <IconsCaretDown />
+    </button> */}
       <div className='dropdown-menu' data-state={`${isVisible?"open": ""}`}>
         <ul className="list">
           <li className="list-item" tabIndex={1}>

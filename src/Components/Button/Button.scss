@@ -2,198 +2,290 @@
 @layer components {
   @mixin button() {
     --btn-bg:theme('colors.transparent');
-    --btn-bg-hover:theme('colors.transparent');
     --btn-color:theme('colors.primary.600');
-    --btn-color-hover:theme('colors.primary.400');
-    @apply p-1 px-3 rounded bg-transparent transition-all text-sm focus:outline-1  inline-flex place-content-center place-items-center gap-1;
-
-    @apply  text-primary-600;
-    @apply hover:text-primary-400 hover:bg-primary-200 hover:shadow-md;
+    --btn-border-color:theme('colors.transparent');
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    border-color: var(--btn-border-color);
+    @apply p-1 px-3 rounded transition-all text-sm focus:outline-1 inline-flex place-content-center place-items-center gap-1;
+    @apply hover:shadow-md;
+    &:hover {
+    --btn-bg:theme('colors.primary.200');
+    --btn-color:theme('colors.primary.400');
+    }
+    &:where(&:active, &.active, &:focus) {
+      --btn-bg:theme('colors.primary.200');
+    }
     &:disabled{
         @apply opacity-30 pointer-events-none;
     }
-    &[data-dropdown='open']{
-      &.dropdown-toggle {
-        @apply text-primary-400 bg-primary-200 shadow-md;
-        > svg {
-          @apply origin-center rotate-180;
-          
-        }
-      }
-    }
+    
   }
+  // .btn mixin 
     
      .btn { 
       @include button();
       &.primary {
-        // --bg:theme('colors.primary.500')
-        @apply bg-primary-700 text-white;
-        @apply hover:bg-primary-500;
-    
-        &:where(&:active, &.active, &:focus) {
-            @apply bg-primary-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-primary-900 text-white;
+        --btn-bg:theme('colors.primary.700');
+        --btn-color:theme('colors.white');
+        &:hover {
+          --btn-bg:theme('colors.primary.500');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.primary.900');
+          }
       }
+      // .primary style end 
       
       &.action {
-        
-        @apply bg-action-400 text-white;
-        @apply hover:bg-action-300;
-
-        
-        &:where(:active, .active, :focus) {
-            @apply bg-action-600;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-action-600 text-white;
+        --btn-bg:theme('colors.action.400');
+        --btn-color:theme('colors.white');
+        &:hover {
+          --btn-bg:theme('colors.action.300');
           }
-        }
-        
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.action.600');
+          }
       }
+      // .btn.action end 
   
       &.action-success {
-        
-        @apply bg-success-500 text-white;
-        
-        &:where(:active, .active, :focus) {
-            @apply bg-success-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-success-900 text-white;
+        --btn-bg:theme('colors.success.500');
+        --btn-color:theme('colors.white');
+        &:hover {
+          --btn-bg:theme('colors.success.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.success.900');
+          }
+        
+        // @apply bg-success-500 text-white;
+        
+        // &:where(:active, .active, :focus) {
+        //     @apply bg-success-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-success-900 text-white;
+        //   }
+        // }
       }
+      // .btn.action-success end 
       &.action-warning {
-        
-        @apply bg-attention-500 text-white;
-        &:where(:active, .active, :focus) {
-            @apply bg-attention-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-attention-900 text-white;
+        --btn-bg:theme('colors.attention.500');
+        --btn-color:theme('colors.white');
+        &:hover {
+          --btn-bg:theme('colors.attention.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.attention.900');
+          }
+
+
+        // @apply bg-attention-500 text-white;
+        // &:where(:active, .active, :focus) {
+        //     @apply bg-attention-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-attention-900 text-white;
+        //   }
+        // }
       }
+      // .btn.action-warning end 
   
       &.action-danger {
-        
-        @apply bg-error-500 text-white;
-        
-        &:where(:active, .active, :focus) {
-            @apply bg-error-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-error-900 text-white;
+
+        --btn-bg:theme('colors.error.500');
+        --btn-color:theme('colors.white');
+        &:hover {
+          --btn-bg:theme('colors.error.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.error.900');
+          }
+        
+        // @apply bg-error-500 text-white;
+        
+        // &:where(:active, .active, :focus) {
+        //     @apply bg-error-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-error-900 text-white;
+        //   }
+        // }
       }
+      // .btn.action-danger end 
       
   
       &.danger {
-        @apply text-error-500;
-        @apply hover:text-error-900 hover:bg-error-100;
-
-        &:where(:active, .active, :focus) {
-            @apply text-error-900 bg-error-100;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-error-100 text-error-900;
+        --btn-color:theme('colors.error.500');
+        &:hover {
+          --btn-bg:theme('colors.error.100');
+          --btn-color:theme('colors.error.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.error.100');
+            --btn-color:theme('colors.error.900');
+          }
+
+
+        // @apply text-error-500;
+        // @apply hover:text-error-900 hover:bg-error-100;
+
+        // &:where(:active, .active, :focus) {
+        //     @apply text-error-900 bg-error-100;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-error-100 text-error-900;
+        //   }
+        // }
       }
+      // .btn.danger end 
   
       &.success {
-        
-        @apply text-success-500;
-        @apply hover:text-success-900 hover:bg-success-100;
-        &:where(:active, .active, :focus) {
-            @apply text-success-900 bg-success-100;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-success-900 bg-success-100;
+        --btn-color:theme('colors.success.500');
+        &:hover {
+          --btn-bg:theme('colors.success.100');
+          --btn-color:theme('colors.success.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.success.100');
+            --btn-color:theme('colors.success.900');
+          }
+
+        // @apply text-success-500;
+        // @apply hover:text-success-900 hover:bg-success-100;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-success-900 bg-success-100;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply text-success-900 bg-success-100;
+        //   }
+        // }
       }
-  
+      // .btn.success end 
       &.warning {
-        
-        @apply text-attention-500;
-        @apply hover:text-attention-900 hover:bg-attention-100;
-        &:where(:active, .active, :focus) {
-            @apply text-attention-900 bg-attention-100;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-attention-900 bg-attention-100;
+        --btn-color:theme('colors.attention.500');
+        &:hover {
+          --btn-bg:theme('colors.attention.100');
+          --btn-color:theme('colors.attention.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:theme('colors.attention.100');
+            --btn-color:theme('colors.attention.900');
+          }
+        // @apply text-attention-500;
+        // @apply hover:text-attention-900 hover:bg-attention-100;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-attention-900 bg-attention-100;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply text-attention-900 bg-attention-100;
+        //   }
+        // }
       }
+      // .btn.warning
       // &.link {
         &[class*='link']{
-        @apply shadow-none border-b border-transparent bg-transparent text-primary-600 rounded-none ;
-        @apply  hover:border-b-primary-400 p-1 py-0;
-        &:where(:active, .active, :focus) {
-            @apply text-primary-600 border-b-primary-400;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-primary-600 border-b-primary-400;
+          --btn-color:theme('colors.primary.600');
+          --btn-bg:theme('colors.transparent');
+        &:hover {
+          --btn-color:theme('colors.primary.400');
+          --btn-border-color:theme('colors.primary.400');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:theme('colors.primary.600');
+            --btn-border-color:theme('colors.primary.400');
+          }
+
+        @apply shadow-none border-b rounded-none p-1 py-0;
+        // @apply  hover:border-b-primary-400 p-1 py-0;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-primary-600 border-b-primary-400;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply text-primary-600 border-b-primary-400;
+        //   }
+        // }
       }
+      // .btn.link end 
   
       &.link-danger {
-        
-        @apply text-error-500;
-        @apply hover:text-error-900 hover:border-b-error-900;
-          
-        &:where(:active, .active, :focus) {
-            @apply text-error-900 border-b-error-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply  text-error-900;
+        --btn-color:theme('colors.error.500');
+        &:hover {
+          --btn-color:theme('colors.error.900');
+          --btn-border-color:theme('colors.error.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:theme('colors.error.900');
+            --btn-border-color:theme('colors.error.900');
+          }
+        // @apply text-error-500;
+        // @apply hover:text-error-900 hover:border-b-error-900;
+          
+        // &:where(:active, .active, :focus) {
+        //     @apply text-error-900 border-b-error-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply  text-error-900;
+        //   }
+        // }
       }
+      // .btn.link-danger end 
   
       &.link-success {
-        
-        @apply text-success-500;
-        @apply hover:text-success-900 hover:border-b-success-900;
-        &:where(:active, .active, :focus) {
-            @apply text-success-900 border-b-success-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply  text-success-900;
+
+        --btn-color:theme('colors.success.500');
+        &:hover {
+          --btn-color:theme('colors.success.900');
+          --btn-border-color:theme('colors.success.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:theme('colors.success.900');
+            --btn-border-color:theme('colors.success.900');
+          }
+        
+        // @apply text-success-500;
+        // @apply hover:text-success-900 hover:border-b-success-900;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-success-900 border-b-success-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply  text-success-900;
+        //   }
+        // }
       }
   
       &.link-warning {
-        
-        @apply text-attention-500;
-        @apply hover:text-attention-900 hover:border-b-attention-900;
-        &:where(:active, .active, :focus) {
-            @apply text-attention-900 border-b-attention-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply  text-attention-900;
+
+        --btn-color:theme('colors.attention.500');
+        &:hover {
+          --btn-color:theme('colors.attention.900');
+          --btn-border-color:theme('colors.attention.900');
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:theme('colors.attention.900');
+            --btn-border-color:theme('colors.attention.900');
+          }
+        
+        // @apply text-attention-500;
+        // @apply hover:text-attention-900 hover:border-b-attention-900;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-attention-900 border-b-attention-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply  text-attention-900;
+        //   }
+        // }
       }
         &.xs {
             @apply text-xs;
@@ -209,6 +301,13 @@
         }
         &.icon {
             @apply p-0 aspect-square w-fit min-w-[1.6667em] grid place-content-center place-items-center;
+
+            // --btn-padding: 0rem;
+            // aspect-ratio: 1;
+            // display: inline-flex;
+            // line-height: 0;
+            // padding: var(--btn-padding);
+            // justify-content: center;
         }
         &.round {
             @apply rounded-full;
