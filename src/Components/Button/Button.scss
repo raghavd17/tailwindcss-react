@@ -1,13 +1,21 @@
 @tailwind components;
 @layer components {
     .button {
-        
-        @apply p-1 px-3 rounded bg-transparent transition-all text-sm focus:outline-1 border inline-flex place-content-center place-items-center gap-1;
       
+        @apply p-1 px-3 rounded bg-transparent transition-all text-sm focus:outline-1 border inline-flex place-content-center place-items-center gap-1;
         @apply border-none text-primary-600;
         @apply hover:text-primary-400 hover:bg-primary-200 hover:shadow-md;
         &:disabled{
             @apply opacity-25 pointer-events-none;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-primary-400 bg-primary-200 shadow-md;
+            > svg {
+              @apply origin-center rotate-180;
+              
+            }
+          }
         }
       &[data-button='primary'] {
         @apply bg-primary-700 text-white;
@@ -16,7 +24,11 @@
         &:where(&:active, &.active, &:focus) {
             @apply bg-primary-900;
         }
-
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-primary-900 text-white;
+          }
+        }
       }
       &[data-button='action'] {
         @apply bg-action-400 text-white;
@@ -25,6 +37,11 @@
         
         &:where(:active, .active, :focus) {
             @apply bg-action-600;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-action-600 text-white;
+          }
         }
         
       }
@@ -35,11 +52,21 @@
         &:where(:active, .active, :focus) {
             @apply bg-success-900;
         }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-success-900 text-white;
+          }
+        }
       }
       &[data-button='action-warning'] {
         @apply bg-attention-500 text-white;
         &:where(:active, .active, :focus) {
             @apply bg-attention-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-attention-900 text-white;
+          }
         }
       }
   
@@ -48,6 +75,11 @@
         
         &:where(:active, .active, :focus) {
             @apply bg-error-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-error-900 text-white;
+          }
         }
       }
       
@@ -59,6 +91,11 @@
         &:where(:active, .active, :focus) {
             @apply text-error-900 bg-error-100;
         }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply bg-error-100 text-error-900;
+          }
+        }
       }
   
       &[data-button='success'] {
@@ -66,6 +103,11 @@
         @apply hover:text-success-900 hover:bg-success-100;
         &:where(:active, .active, :focus) {
             @apply text-success-900 bg-success-100;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-success-900 bg-success-100;
+          }
         }
       }
   
@@ -75,13 +117,23 @@
         &:where(:active, .active, :focus) {
             @apply text-attention-900 bg-attention-100;
         }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-attention-900 bg-attention-100;
+          }
+        }
       }
   
       &[data-button*='link'] {
         @apply shadow-none bg-transparent text-primary-600;
-        @apply hover:text-primary-600 hover:underline  hover:underline-offset-8 hover:outline-primary-400;
+        @apply  hover:underline  hover:underline-offset-8 hover:outline-primary-400;
         &:where(:active, .active, :focus) {
             @apply text-primary-600 underline underline-offset-8 outline-primary-400;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply text-primary-600 underline underline-offset-8 outline-primary-400 bg-none;
+          }
         }
       }
   
@@ -91,6 +143,11 @@
         &:where(:active, .active, :focus) {
             @apply text-error-900;
         }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply  text-error-900;
+          }
+        }
       }
   
       &[data-button*='link-success'] {
@@ -99,6 +156,11 @@
         &:where(:active, .active, :focus) {
             @apply text-success-900;
         }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply  text-success-900;
+          }
+        }
       }
   
       &[data-button*='link-warning'] {
@@ -106,6 +168,11 @@
         @apply hover:text-attention-900;
         &:where(:active, .active, :focus) {
             @apply text-attention-900;
+        }
+        &[data-dropdown='open']{
+          &.dropdown-toggle {
+            @apply  text-attention-900;
+          }
         }
       }
         &.xs {

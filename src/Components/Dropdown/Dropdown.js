@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import IconCheckmark from '../../Icons/IconCheckmark';
 import { NavLink } from 'react-router-dom';
 import './Dropdown.scss';
-import IconClose from '../../Icons/IconClose';
+import IconsCaretDown from '../../Icons/IconsCaretDown';
 
 const Dropdown = () => {
 
@@ -13,9 +13,9 @@ const Dropdown = () => {
     
     <h2 className='text-red-500 mb-4 text-5xl'>Dropdowns</h2>
     <div className='dropdown test'>
-    <button className='button toggle-dropdown active' data-button="danger" onClick={()=>setIsVisible(!isVisible)}>
-      Open Dropdown
-    <IconClose />
+    <button className='button dropdown-toggle'  data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
+      <span>Open Dropdown</span>
+    <IconsCaretDown />
     </button>
       <div className='dropdown-menu' data-state={`${isVisible?"open": ""}`}>
         <ul className="list">
