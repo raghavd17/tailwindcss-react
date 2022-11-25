@@ -1,60 +1,66 @@
-import React from 'react'
-import Checkmark from './../Icons/Checkmark';
+import React, { useState } from 'react'
+import IconCheckmark from '../../Icons/IconCheckmark';
+import { NavLink } from 'react-router-dom';
 import './Dropdown.scss';
 
 const Dropdown = () => {
+
+  const [isVisible, setIsVisible] = useState(false)
   return (
     
 <main className='p-4'>
     
     <h2 className='text-red-500 mb-4 text-5xl'>Dropdowns</h2>
     <div className='dropdown'>
-      <p>Dropdown here</p>
-      <div className='dropdown-menu' data-state="open">
+      <p onClick={()=>setIsVisible(!isVisible)}>Dropdown here</p>
+      <div className='dropdown-menu' data-state={`${isVisible?"open": ""}`}>
         <ul className="list">
-      <li className="list-item" data-item="group">
-          <div className="list-title"> Inactive Data Group item </div>
-        <div>
-          <span> 
-          <div className="item-checkbox" data-state="">
+          <li className="list-item" tabIndex={1}>
+            <NavLink to={'/List'} key={1}  className="item-link"> Link item here </NavLink>
+          </li>
+          <li className="list-item" data-item="group" tabIndex={2}>
+              <div className="list-title"> Inactive Data Group item </div>
             <div>
-              <Checkmark />
-              </div>
-              </div>
-              </span>
-        </div>
-      </li>
-
-      <li className="list-item" data-item="group" data-state="active">
-        <div className="list-title">Active data-item
-        </div>
-        <div>
-          <div className="item-checkbox" data-state="active">
-            <div>
-            <Checkmark />
+              <span> 
+              <div className="item-checkbox" data-state="">
+                <div>
+                  <IconCheckmark />
+                  </div>
+                  </div>
+                  </span>
             </div>
-          </div>
-        </div>
-      </li>
+          </li>
+
+          <li className="list-item" data-item="group" data-state="" tabIndex={3}>
+            <div className="list-title">Active data-item
+            </div>
+            <div>
+              <div className="item-checkbox" data-state="active">
+                <div>
+                <IconCheckmark />
+                </div>
+              </div>
+            </div>
+          </li>
     
-      <li className="list-item" data-item="group" data-state="active"> 
-        <div className="list-title">Title here
-          </div>
-        <div className="item-checkbox" data-item="group" data-state="active">
-          <div className="flex ">
-          <span>A</span>  -- <span>Z</span>
-          </div>
-        </div>
-      </li>
-      <li className="list-item" data-item="group" data-state="active"> 
-        <div  className="list-title">Title here
-          </div>
-        <div className="item-checkbox" data-state="">
-          <div className="flex">
-          <span>A</span>  -- <span>Z</span>
-          </div>
-        </div>
-      </li>
+          <li className="list-item" data-item="group" data-state="" tabIndex={4}> 
+            <div className="list-title">Title here
+              </div>
+            <div className="item-checkbox" data-item="group" data-state="">
+              <div className="flex ">
+              <span>A</span>  -- <span>Z</span>
+              </div>
+            </div>
+          </li>
+          <li className="list-item" data-item="group" data-state="" tabIndex={5}> 
+            <div  className="list-title">Title here
+              </div>
+            <div className="item-checkbox" data-state="">
+              <div className="flex">
+              <span>A</span>  -- <span>Z</span>
+              </div>
+            </div>
+          </li>
       
         </ul>
       </div>

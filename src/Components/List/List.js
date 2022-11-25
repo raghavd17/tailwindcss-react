@@ -1,5 +1,6 @@
 import React from 'react';
-import Checkmark from './../Icons/Checkmark';
+import { NavLink } from 'react-router-dom';
+import IconCheckmark from '../../Icons/IconCheckmark';
 import './List.scss'
 
 const List = () => {
@@ -9,40 +10,43 @@ const List = () => {
     
     <h2 className='text-red-500 mb-4 text-5xl'>List Items </h2>
     <ul className="list">
-      <li className="list-item" data-item="group">
+      <li className="list-item" data-item="group" tabIndex={1}>
+        <NavLink className="item-link">  Nav Link here </NavLink>
+      </li>
+      <li className="list-item" data-item="group" tabIndex={1}>
           <div className="list-title"> Inactive Data Group item </div>
         <div>
          
-          <div className="item-checkbox" data-state="">
-              <Checkmark />
+          <div className="item-checkbox" data-state="active">
+              <IconCheckmark />
               </div>
               
         </div>
       </li>
 
-      <li className="list-item" data-item="group" data-state="active">
+      <li className="list-item" data-item="group" data-state="active" tabIndex={2}>
         <div className="list-title">Active data-item
         </div>
         <div>
-          <div className="item-checkbox" data-state="active">
+          <div className="item-checkbox" data-state="">
           
-            <Checkmark />
+            <IconCheckmark />
           
           </div>
         </div>
       </li>
     
-      <li className="list-item" data-item="group" data-state="active"> 
+      <li className="list-item" data-item="group" data-state="" tabIndex={3}> 
         <div className="list-title">Title here
           </div>
-        <div className="item-checkbox" data-item="group" data-state="active">
+        <div className="item-checkbox" data-item="group" data-state="acctive">
           <div className="list-label" data-item="group">
           <span>A</span> -- <span>Z</span>
           </div>
         </div>
       </li>
       <li className='list-divider'></li>
-      <li className="list-item" data-item="group" data-state="active"> 
+      <li className="list-item" data-item="group" data-state="" tabIndex={4}> 
         <div  className="list-title">Title here
           </div>
         <div className="item-checkbox" data-state="">
@@ -51,7 +55,7 @@ const List = () => {
           </div>
         </div>
       </li>
-      <li className="list-item" data-item="group" data-state="active"> 
+      <li className="list-item" data-item="group" data-state="" tabIndex={5}> 
         <div  className="list-title">Title here
           </div>
         <div> <input type="checkbox"  className='h-5 aspect-square' /></div>
@@ -60,7 +64,7 @@ const List = () => {
     </ul>
     <h2>Checkbox </h2>
     <div className="item-checkbox" data-state="active">            
-        <Checkmark />
+        <IconCheckmark />
     </div>
     <hr/>
     <div className="item-checkbox" data-state="">
@@ -69,20 +73,7 @@ const List = () => {
           </div>
     </div>
 
-    <hr/>
-    <ul className='list'>
-    <li className="list-item" data-item="group">
-    <div className="list-title">Title here
-          </div>
-        <div className="item-checkbox" data-state="">
-          <div className="list-label" data-item="group">
-          <span>A</span> --<span>Z</span>
-          </div>
-        </div>
-    </li>
-      <li className="list-item"> Group Item</li>
-      
-    </ul>
+    
   </main>
   )
 }
