@@ -28,7 +28,7 @@ const Dropdown = () => {
 
             
           </li>
-          <li className="list-item" data-item="group" tabIndex={2}>
+          <li className="list-item group" tabIndex={2}>
               <div className="list-title"> Inactive Data Group item </div>
             <div>
               <span> 
@@ -41,7 +41,7 @@ const Dropdown = () => {
             </div>
           </li>
 
-          <li className="list-item" data-item="group" data-state="" tabIndex={3}>
+          <li className="list-item group" data-state="" tabIndex={3}>
             <div className="list-title">Active data-item
             </div>
             <div>
@@ -53,16 +53,16 @@ const Dropdown = () => {
             </div>
           </li>
     
-          <li className="list-item" data-item="group" data-state="" tabIndex={4}> 
+          <li className="list-item group" data-state="" tabIndex={4}> 
             <div className="list-title">Title here
               </div>
-            <div className="item-checkbox" data-item="group" data-state="">
+            <div className="item-checkbox group" data-state="">
               <div className="flex ">
               <span>A</span>  -- <span>Z</span>
               </div>
             </div>
           </li>
-          <li className="list-item" data-item="group" data-state="" tabIndex={5}> 
+          <li className="list-item group" data-state="" tabIndex={5}> 
             <div  className="list-title">Title here
               </div>
             <div className="item-checkbox" data-state="">
