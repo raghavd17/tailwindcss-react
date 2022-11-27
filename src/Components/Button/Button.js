@@ -30,13 +30,16 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn xs'>xs</button>
                 <button className='btn'>Regular</button>
-                <button className='btn lg'>lg</button>
+                <button className='btn md'>md</button>
                 
-                <button className='btn xxl'>xxl</button>
+                <button className='btn lg'>lg</button>
+                <button className='btn icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn icon xxl'>
+                <button className='btn icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -68,13 +71,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn success xs'>xs</button>
                 <button className='btn success'> Regular</button>
-                <button className='btn success lg'> lg</button>
+                <button className='btn success md'> md</button>
                 
-                <button className='btn success xxl'> xxl</button>
+                <button className='btn success lg'> lg</button>
+                <button className='btn success xl'> xl</button>
+                <button className='btn success icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn success icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn success icon xxl'>
+                <button className='btn success icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -106,13 +113,17 @@ const Button = () => {
             <div className='cluster items-center'>
             <button className='btn warning xs'>xs</button>
                 <button className='btn warning'>Regular</button>
-                <button className='btn warning lg'> lg</button>
+                <button className='btn warning md'> md</button>
                 
-                <button className='btn warning xxl'> xxl</button>
+                <button className='btn warning lg'> lg</button>
+                <button className='btn warning xl'> xl</button>
+                <button className='btn warning icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn warning icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn warning icon xxl'>
+                <button className='btn warning icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -144,13 +155,17 @@ const Button = () => {
             <div className='cluster items-center'>
             <button className='btn danger xs'>xs</button>
                 <button className='btn danger'>Regular</button>
-                <button className='btn danger lg'> lg</button>
+                <button className='btn danger md'> md</button>
                 
-                <button className='btn danger xxl'> xxl</button>
+                <button className='btn danger lg'> lg</button>
+                <button className='btn danger xl'> xl</button>
+                <button className='btn danger icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn danger icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn danger icon xxl'>
+                <button className='btn danger icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -182,13 +197,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn link xs'>xs</button>
                 <button className='btn link'>Regular</button>
-                <button className='btn link lg'> lg</button>
+                <button className='btn link md'> md</button>
                 
-                <button className='btn link xxl'> xxl</button>
+                <button className='btn link lg'> lg</button>
+                <button className='btn link xl'> xl</button>
+                <button className='btn link icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn link icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn link icon xxl'>
+                <button className='btn link icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -220,13 +239,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn link-success xs'>xs</button>
                 <button className='btn link-success'>Regular</button>
-                <button className='btn link-success lg'> lg</button>
+                <button className='btn link-success md'> md</button>
                 
-                <button className='btn link-success xxl'> xxl</button>
+                <button className='btn link-success lg'> lg</button>
+                <button className='btn link-success xl'> xl</button>
+                <button className='btn link-success icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn link-success icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn link-success icon xxl'>
+                <button className='btn link-success icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -258,14 +281,18 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn link-warning xs'>xs</button>
                 <button className='btn link-warning'>Regular</button>
-                <button className='btn link-warning lg'> lg</button>
+                <button className='btn link-warning md'> md</button>
                
-                <button className='btn link-warning xxl'> xxl</button>
-                <button className='btn link-warning icon lg'>
+                <button className='btn link-warning lg'> lg</button>
+                <button className='btn link-warning xl'> xl</button>
+                <button className='btn link-warning icon md'>
                     <IconSearch />
                 </button>
                
-                <button className='btn link-warning icon xxl'>
+                <button className='btn link-warning icon lg'>
+                    <IconSearch />
+                </button>
+                <button className='btn link-warning icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -297,13 +324,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn link-danger xs'>xs</button>
                 <button className='btn link-danger'>Regular</button>
-                <button className='btn link-danger lg'> lg</button>
+                <button className='btn link-danger md'> md</button>
                 
-                <button className='btn link-danger xxl'> xxl</button>
+                <button className='btn link-danger lg'> lg</button>
+                <button className='btn link-danger xl'> xl</button>
+                <button className='btn link-danger icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn link-danger icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn link-danger icon xxl'>
+                <button className='btn link-danger icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -335,13 +366,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='[ btn primary ] [ round ] xs'>xs</button>
                 <button className='[ btn primary ] [ round ]'>Regular</button>
-                <button className='[ btn primary ] [ round ] lg'> lg</button>
+                <button className='[ btn primary ] [ round ] md'> md</button>
                 
-                <button className='[ btn primary ] [ round ] xxl'> xxl</button>
+                <button className='[ btn primary ] [ round ] lg'> lg</button>
+                <button className='[ btn primary ] [ round ] xl'> xl</button>
+                <button className='[ btn primary ] [ round ] icon md'>
+                    <IconSearch />
+                </button>
                 <button className='[ btn primary ] [ round ] icon lg'>
                     <IconSearch />
                 </button>
-                <button className='[ btn primary ] [ round ] icon xxl'>
+                <button className='[ btn primary ] [ round ] icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -372,13 +407,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='[ btn primary ] xs'>xs</button>
                 <button className='[ btn primary ]'>Regular</button>
-                <button className='[ btn primary ] lg'> lg</button>
+                <button className='[ btn primary ] md'> md</button>
                 
-                <button className='[ btn primary ] xxl'> xxl</button>
+                <button className='[ btn primary ] lg'> lg</button>
+                <button className='[ btn primary ] xl'> xl</button>
+                <button className='[ btn primary ] icon md'>
+                    <IconSearch />
+                </button>
                 <button className='[ btn primary ] icon lg'>
                     <IconSearch />
                 </button>
-                <button className='[ btn primary ] icon xxl'>
+                <button className='[ btn primary ] icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -408,14 +447,18 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn action xs'>xs</button>
                 <button className='btn action'>Regular</button>
-                <button className='btn action lg'> lg</button>
+                <button className='btn action md'> md</button>
                 
-                <button className='btn action xxl'> xxl</button>
-                <button className='btn action icon lg'>
+                <button className='btn action lg'> lg</button>
+                <button className='btn action xl'> xl</button>
+                <button className='btn action icon md'>
                     <IconSearch />
                 </button>
                 
-                <button className='btn action icon xxl'>
+                <button className='btn action icon lg'>
+                    <IconSearch />
+                </button>
+                <button className='btn action icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -446,13 +489,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn action-success xs'>xs</button>
                 <button className='btn action-success'>Regular</button>
+                <button className='btn action-success md'> md</button>
                 <button className='btn action-success lg'> lg</button>
-                <button className='btn action-success xxl'> xxl</button>
-                <button className='btn action-success icon lg'>
+                <button className='btn action-success xl'> xl</button>
+                <button className='btn action-success icon md'>
                     <IconSearch />
                 </button>
                 
-                <button className='btn action-success icon xxl'>
+                <button className='btn action-success icon lg'>
+                    <IconSearch />
+                </button>
+                <button className='btn action-success icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -483,13 +530,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn action-warning xs'>xs</button>
                 <button className='btn action-warning'>Regular</button>
+                <button className='btn action-warning md'> md</button>
                 <button className='btn action-warning lg'> lg</button>
-                <button className='btn action-warning xxl'> xxl</button>
-                <button className='btn action-warning icon lg'>
+                <button className='btn action-warning xl'> xl</button>
+                <button className='btn action-warning icon md'>
                     <IconSearch />
                 </button>
                 
-                <button className='btn action-warning icon xxl'>
+                <button className='btn action-warning icon lg'>
+                    <IconSearch />
+                </button>
+                <button className='btn action-warning icon xl'>
                     <IconSearch />
                 </button>
             </div>
@@ -520,13 +571,17 @@ const Button = () => {
             <div className='cluster items-center'>
                 <button className='btn action-danger xs'>xs</button>
                 <button className='btn action-danger'>Regular</button>
-                <button className='btn action-danger lg'> lg</button>
+                <button className='btn action-danger md'> md</button>
                 
-                <button className='btn action-danger xxl'> xxl</button>
+                <button className='btn action-danger lg'> lg</button>
+                <button className='btn action-danger xl'> xl</button>
+                <button className='btn action-danger icon md'>
+                    <IconSearch />
+                </button>
                 <button className='btn action-danger icon lg'>
                     <IconSearch />
                 </button>
-                <button className='btn action-danger icon xxl'>
+                <button className='btn action-danger icon xl'>
                     <IconSearch />
                 </button>
             </div>
