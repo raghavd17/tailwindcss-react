@@ -9,7 +9,7 @@
     --btn-height-md: 32px;
     --btn-height-lg: 40px;
     --btn-height-xl: 48px;
-    --btn-height:var(--btn-height-sm);
+    --btn-height:var(--btn-height-lg);
 
     --btn-radius: theme('borderRadius.DEFAULT');
     --btn-padding: theme('padding.1') theme('padding.3');
@@ -19,7 +19,7 @@
     padding: var(--btn-padding);
     height: var(--btn-height);
     border-radius: var(--btn-radius);
-    @apply transition-all text-xs focus:outline-1 inline-flex place-content-center place-items-center gap-1;
+    @apply transition-all focus:outline-1 inline-flex place-content-center place-items-center gap-1;
     @apply hover:shadow-md;
 
     &:hover {
@@ -31,7 +31,7 @@
       --btn-bg: var(--color-primary-200);
     }
 
-    &:disabled {
+    &:disabled, &.disabled {
       @apply opacity-30 pointer-events-none;
     }
 
@@ -256,15 +256,15 @@
 
     }
 
-    // &.xs {
-    //   @apply text-xs;
-
-    //   &:not([class*='link']) {
-    //     --btn-height: var(--btn-height-sm);
-    //   }
-    // }
+    &.sm {
+      @apply text-xs;
+      &:not([class*='link']) {
+        --btn-height: var(--btn-height-sm);
+      }
+    }
 
     &.md {
+      @apply text-xs;
       &:not([class*='link']) {
         --btn-height: var(--btn-height-md);
       }
@@ -287,7 +287,7 @@
 
     &.icon {
       --btn-padding: 0rem;
-      @apply aspect-square w-fit min-w-[1.6667em] grid place-content-center place-items-center;
+      @apply aspect-square w-fit min-w-[1.6667em] place-content-center place-items-center;
       padding: var(--btn-padding);
     }
 
