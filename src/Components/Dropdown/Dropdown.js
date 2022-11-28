@@ -57,7 +57,7 @@ const Dropdown = () => {
             <div className="list-title">Title here
               </div>
             <div className="item-checkbox group" data-state="">
-              <div className="flex ">
+              <div className="list-label">
               <span>A</span>  -- <span>Z</span>
               </div>
             </div>
@@ -66,7 +66,7 @@ const Dropdown = () => {
             <div  className="list-title">Title here
               </div>
             <div className="item-checkbox" data-state="">
-              <div className="flex">
+              <div className="list-label">
               <span>A</span>  -- <span>Z</span>
               </div>
             </div>
