@@ -32,7 +32,7 @@ const Button = () => {
                 <button className='btn sm'>sm</button>
                 <button className='btn md'>md</button>
                 <button className='btn lg'>lg</button>
-                <button className='btn xl'>lg</button>
+                <button className='btn xl'>xl</button>
                 <button className='btn icon md'>
                     <IconSearch />
                 </button>
