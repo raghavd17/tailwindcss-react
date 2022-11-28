@@ -2,7 +2,7 @@ import React from 'react'
 import IconSearch from '../../Icons/IconSearch';
 // import IconClose from '../../Icons/IconsClose';
 
-// import './Search.scss';
+// import './search.scss';
 
 const Search = () => {
   return (

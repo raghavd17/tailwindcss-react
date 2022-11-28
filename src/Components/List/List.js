@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import IconCheckmark from '../../Icons/IconCheckmark';
-import './List.scss'
+import './list.scss'
 
 const List = () => {
   return (
