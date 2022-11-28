@@ -41,7 +41,20 @@
 
   .btn {
     @include button();
-
+      
+      &-group {
+        --gap: 0;
+        gap: var(--gap);
+        @apply inline-flex flex-1 items-center w-fit;
+        :where(.btn:not(:last-child):not(.dropdown-toggle)) {
+          @apply rounded-r-none;    
+        }
+        :where(.btn:not(:first-child)) {
+          @apply rounded-l-none;
+        } 
+      }
+      
+    // .btn-group end 
     &.primary {
       --btn-bg: var(--color-primary-700);
       --btn-color: var(--color-white);
