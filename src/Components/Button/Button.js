@@ -1,7 +1,7 @@
 import React from 'react';
 import IconSearch from '../../Icons/IconSearch';
 
-import './Button.scss';
+import './button.scss';
 
 const Button = () => {
   return (
@@ -28,11 +28,11 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn xs'>xs</button>
+               
                 <button className='btn'>Regular</button>
                 <button className='btn md'>md</button>
-                
                 <button className='btn lg'>lg</button>
+                <button className='btn xl'>lg</button>
                 <button className='btn icon md'>
                     <IconSearch />
                 </button>
@@ -69,7 +69,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Success Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn success xs'>xs</button>
+                
                 <button className='btn success'> Regular</button>
                 <button className='btn success md'> md</button>
                 
@@ -111,7 +111,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button warning Sizes </h1>
             <div className='cluster items-center'>
-            <button className='btn warning xs'>xs</button>
+            
                 <button className='btn warning'>Regular</button>
                 <button className='btn warning md'> md</button>
                 
@@ -153,7 +153,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Danger Sizes </h1>
             <div className='cluster items-center'>
-            <button className='btn danger xs'>xs</button>
+            
                 <button className='btn danger'>Regular</button>
                 <button className='btn danger md'> md</button>
                 
@@ -195,7 +195,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Link Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn link xs'>xs</button>
+                
                 <button className='btn link'>Regular</button>
                 <button className='btn link md'> md</button>
                 
@@ -279,7 +279,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Link Warning Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn link-warning xs'>xs</button>
+                
                 <button className='btn link-warning'>Regular</button>
                 <button className='btn link-warning md'> md</button>
                
@@ -322,7 +322,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Link Danger Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn link-danger xs'>xs</button>
+                
                 <button className='btn link-danger'>Regular</button>
                 <button className='btn link-danger md'> md</button>
                 
@@ -364,7 +364,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Primary Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='[ btn primary ] [ round ] xs'>xs</button>
+                
                 <button className='[ btn primary ] [ round ]'>Regular</button>
                 <button className='[ btn primary ] [ round ] md'> md</button>
                 
@@ -405,7 +405,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Primary Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='[ btn primary ] xs'>xs</button>
+                
                 <button className='[ btn primary ]'>Regular</button>
                 <button className='[ btn primary ] md'> md</button>
                 
@@ -445,7 +445,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn action xs'>xs</button>
+                
                 <button className='btn action'>Regular</button>
                 <button className='btn action md'> md</button>
                 
@@ -487,7 +487,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Success Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn action-success xs'>xs</button>
+                
                 <button className='btn action-success'>Regular</button>
                 <button className='btn action-success md'> md</button>
                 <button className='btn action-success lg'> lg</button>
@@ -528,7 +528,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Warning Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn action-warning xs'>xs</button>
+                
                 <button className='btn action-warning'>Regular</button>
                 <button className='btn action-warning md'> md</button>
                 <button className='btn action-warning lg'> lg</button>
@@ -569,7 +569,7 @@ const Button = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Danger Button Sizes </h1>
             <div className='cluster items-center'>
-                <button className='btn action-danger xs'>xs</button>
+                
                 <button className='btn action-danger'>Regular</button>
                 <button className='btn action-danger md'> md</button>
                 
