@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./nav/Nav";
-import Button from './Components/Button/Button';
+import Button from './pages/ButtonPage';
 import List from './Components/List/List';
 import Dropdown from './Components/Dropdown/Dropdown';
 import Date from './Components/Date/Date';
