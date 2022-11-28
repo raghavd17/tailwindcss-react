@@ -260,38 +260,26 @@ const ButtonPage = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Round Primary</h1>
             <div className='cluster items-center'>
-                <button className='[ btn primary ] [ round ]'>Button</button>
-                <button className='[ btn primary ] [ round ]'><IconSearch /> Icon Before </button>
-                <button className='[ btn primary ] [ round ]'>Icon After <IconSearch /></button>
-                <button className='[ btn primary ] [ round ] active'>Active</button>
-                <button className='[ btn primary ] [ round ]' disabled>Disabled</button>
-                
-                <button className='[ btn primary ] [ round icon ]'>
-                    <IconSearch />
-                </button>
-                <button className='[ btn primary ] [ round icon ]'>
-                    <IconSearch />
-                </button>
+                <Button type="primary" round>Button</Button>
+                <Button type="primary" round><IconSearch /> Icon Before</Button>
+                <Button type="primary" round>Icon After <IconSearch /></Button>
+                <Button type="primary" round active>Active</Button>
+                <Button type="primary" round disabled>Disabled</Button>
+                <Button type="primary" round icon><IconSearch /></Button>
+                <Button type="primary" round icon><IconSearch /></Button>
+    
             </div>
           </div>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Primary Button Sizes </h1>
             <div className='cluster items-center'>
-                
-                <button className='[ btn primary ] [ round ]'>Regular</button>
-                <button className='[ btn primary ] [ round ] md'> md</button>
-                
-                <button className='[ btn primary ] [ round ] lg'> lg</button>
-                <button className='[ btn primary ] [ round ] xl'> xl</button>
-                <button className='[ btn primary ] [ round ] icon md'>
-                    <IconSearch />
-                </button>
-                <button className='[ btn primary ] [ round ] icon lg'>
-                    <IconSearch />
-                </button>
-                <button className='[ btn primary ] [ round ] icon xl'>
-                    <IconSearch />
-                </button>
+                <Button type="primary" round>Regular</Button>
+                <Button type="primary" round size="md">md</Button>
+                <Button type="primary" round size="lg">lg</Button>
+                <Button type="primary" round size="xl">xl</Button>
+                <Button type="primary" round icon size="md"><IconSearch /></Button>
+                <Button type="primary" round icon size="lg"><IconSearch /></Button>
+                <Button type="primary" round icon size="xl"><IconSearch /></Button>
             </div>
           </div>
         </section>
@@ -301,38 +289,28 @@ const ButtonPage = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Primary</h1>
             <div className='cluster items-center'>
-                <button className='[ btn primary ]'>Button</button>
-                <button className='[ btn primary ]'><IconSearch /> Icon Before </button>
-                <button className='[ btn primary ]'>Icon After <IconSearch /></button>
-                <button className='[ btn primary ] active'>Active</button>
-                <button className='[ btn primary ]' disabled>Disabled</button>
+                 <Button type="primary">Button</Button>
+                <Button type="primary"><IconSearch /> Icon Before</Button>
+                <Button type="primary">Icon After <IconSearch /></Button>
+                <Button type="primary" active>Active</Button>
+                <Button type="primary" disabled>Disabled</Button>
+                <Button type="primary" icon><IconSearch /></Button>
+                <Button type="primary" round icon><IconSearch /></Button>
                 
-                <button className='[ btn primary ] icon'>
-                    <IconSearch />
-                </button>
-                <button className='[ btn primary ] [ round ] icon'>
-                    <IconSearch />
-                </button>
             </div>
           </div>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Primary Button Sizes </h1>
             <div className='cluster items-center'>
+                <Button type="primary" >Regular</Button>
+                <Button type="primary" size="md">md</Button>
+                <Button type="primary" size="lg">lg</Button>
+                <Button type="primary" size="xl">xl</Button>
+                <Button type="primary" icon size="md"><IconSearch /></Button>
+                <Button type="primary" icon size="lg"><IconSearch /></Button>
+                <Button type="primary" icon size="xl"><IconSearch /></Button>
                 
-                <button className='[ btn primary ]'>Regular</button>
-                <button className='[ btn primary ] md'> md</button>
-                
-                <button className='[ btn primary ] lg'> lg</button>
-                <button className='[ btn primary ] xl'> xl</button>
-                <button className='[ btn primary ] icon md'>
-                    <IconSearch />
-                </button>
-                <button className='[ btn primary ] icon lg'>
-                    <IconSearch />
-                </button>
-                <button className='[ btn primary ] icon xl'>
-                    <IconSearch />
-                </button>
+            
             </div>
           </div>
         </section>
@@ -341,39 +319,27 @@ const ButtonPage = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Action</h1>
             <div className='cluster items-center'>
-                <button className='btn action'>Button</button>
-                <button className='btn action'><IconSearch /> Icon Before </button>
-                <button className='btn action'>Icon After <IconSearch /></button>
-                <button className='btn action active'>Active</button>
-                <button className='btn action' disabled>Disabled</button>
-                
-                <button className='btn action icon'>
-                    <IconSearch />
-                </button>
-                <button className='btn action  round icon '>
-                    <IconSearch />
-                </button>
+                <Button type="action" >Button</Button>
+                <Button type="action"><IconSearch /> Icon Before</Button>
+                <Button type="action">Icon After <IconSearch /></Button>
+                <Button type="action" active>Active</Button>
+                <Button type="action" disabled>Disabled</Button>
+                <Button type="action" icon><IconSearch /></Button>
+                <Button type="action" round icon><IconSearch /></Button>
+               
             </div>
           </div>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Button Sizes </h1>
             <div className='cluster items-center'>
-                
-                <button className='btn action'>Regular</button>
-                <button className='btn action md'> md</button>
-                
-                <button className='btn action lg'> lg</button>
-                <button className='btn action xl'> xl</button>
-                <button className='btn action icon md'>
-                    <IconSearch />
-                </button>
-                
-                <button className='btn action icon lg'>
-                    <IconSearch />
-                </button>
-                <button className='btn action icon xl'>
-                    <IconSearch />
-                </button>
+
+                <Button type="action" >Regular</Button>
+                <Button type="action" size="md">md</Button>
+                <Button type="action" size="lg">lg</Button>
+                <Button type="action" size="xl">xl</Button>
+                <Button type="action" icon size="md"><IconSearch /></Button>
+                <Button type="action" icon size="lg"><IconSearch /></Button>
+                <Button type="action" icon size="xl"><IconSearch /></Button>
             </div>
           </div>
         </section>
@@ -383,38 +349,29 @@ const ButtonPage = () => {
           <div className='stack  divide-slate-600'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Success Button</h1>
             <div className='cluster items-center'>
-                <button className='btn action-success'>Button</button>
-                <button className='btn action-success'><IconSearch /> Icon Before </button>
-                <button className='btn action-success'>Icon After <IconSearch /></button>
-                <button className='btn action-success active'>Active</button>
-                <button className='btn action-success' disabled>Disabled</button>
+                <Button type="action-success" >Button</Button>
+                <Button type="action-success"><IconSearch /> Icon Before</Button>
+                <Button type="action-success">Icon After <IconSearch /></Button>
+                <Button type="action-success" active>Active</Button>
+                <Button type="action-success" disabled>Disabled</Button>
+                <Button type="action-success" icon><IconSearch /></Button>
+                <Button type="action-success" round icon><IconSearch /></Button>
+
                 
-                <button className='btn action-success icon'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-success  round icon '>
-                    <IconSearch />
-                </button>
             </div>
           </div>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Success Button Sizes </h1>
             <div className='cluster items-center'>
-                
-                <button className='btn action-success'>Regular</button>
-                <button className='btn action-success md'> md</button>
-                <button className='btn action-success lg'> lg</button>
-                <button className='btn action-success xl'> xl</button>
-                <button className='btn action-success icon md'>
-                    <IconSearch />
-                </button>
-                
-                <button className='btn action-success icon lg'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-success icon xl'>
-                    <IconSearch />
-                </button>
+                <Button type="action-success" >Regular</Button>
+                <Button type="action-success" size="md">md</Button>
+                <Button type="action-success" size="lg">lg</Button>
+                <Button type="action-success" size="xl">xl</Button>
+                <Button type="action-success" icon size="md"><IconSearch /></Button>
+                <Button type="action-success" icon size="lg"><IconSearch /></Button>
+                <Button type="action-success" icon size="xl"><IconSearch /></Button>
+
+               
             </div>
           </div>
         </section>
@@ -424,38 +381,25 @@ const ButtonPage = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Action Warning</h1>
             <div className='cluster items-center'>
-                <button className='btn action-warning'>Button</button>
-                <button className='btn action-warning'><IconSearch /> Icon Before </button>
-                <button className='btn action-warning'>Icon After <IconSearch /></button>
-                <button className='btn action-warning active'>Active</button>
-                <button className='btn action-warning' disabled>Disabled</button>
-                
-                <button className='btn action-warning icon'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-warning  round icon '>
-                    <IconSearch />
-                </button>
+                <Button type="action-warning">Button</Button>
+                <Button type="action-warning"><IconSearch /> Icon Before</Button>
+                <Button type="action-warning">Icon After <IconSearch /></Button>
+                <Button type="action-warning" active>Active</Button>
+                <Button type="action-warning" disabled>Disabled</Button>
+                <Button type="action-warning" icon><IconSearch /></Button>
+                <Button type="action-warning" round icon><IconSearch /></Button>
             </div>
           </div>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Warning Button Sizes </h1>
             <div className='cluster items-center'>
-                
-                <button className='btn action-warning'>Regular</button>
-                <button className='btn action-warning md'> md</button>
-                <button className='btn action-warning lg'> lg</button>
-                <button className='btn action-warning xl'> xl</button>
-                <button className='btn action-warning icon md'>
-                    <IconSearch />
-                </button>
-                
-                <button className='btn action-warning icon lg'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-warning icon xl'>
-                    <IconSearch />
-                </button>
+                 <Button type="action-warning">Regular</Button>
+                <Button type="action-warning" size="md">md</Button>
+                <Button type="action-warning" size="lg">lg</Button>
+                <Button type="action-warning" size="xl">xl</Button>
+                <Button type="action-warning" icon size="md"><IconSearch /></Button>
+                <Button type="action-warning" icon size="lg"><IconSearch /></Button>
+                <Button type="action-warning" icon size="xl"><IconSearch /></Button>
             </div>
           </div>
         </section>
@@ -465,38 +409,30 @@ const ButtonPage = () => {
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Danger</h1>
             <div className='cluster items-center'>
-                <button className='btn action-danger'>Button</button>
-                <button className='btn action-danger'><IconSearch /> Icon Before </button>
-                <button className='btn action-danger'>Icon After <IconSearch /></button>
-                <button className='btn action-danger active'>Active</button>
-                <button className='btn action-danger' disabled>Disabled</button>
-                
-                <button className='btn action-danger icon'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-danger  round icon '>
-                    <IconSearch />
-                </button>
+                <Button type="action-danger">Button</Button>
+                <Button type="action-danger"><IconSearch /> Icon Before</Button>
+                <Button type="action-danger">Icon After <IconSearch /></Button>
+                <Button type="action-danger" active>Active</Button>
+                <Button type="action-danger" disabled>Disabled</Button>
+                <Button type="action-danger" icon><IconSearch /></Button>
+                <Button type="action-danger" round icon><IconSearch /></Button>
+
+               
             </div>
           </div>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Action Danger Button Sizes </h1>
             <div className='cluster items-center'>
+
+                 <Button type="action-danger">Regular</Button>
+                <Button type="action-danger" size="md">md</Button>
+                <Button type="action-danger" size="lg">lg</Button>
+                <Button type="action-danger" size="xl">xl</Button>
+                <Button type="action-danger" icon size="md"><IconSearch /></Button>
+                <Button type="action-danger" icon size="lg"><IconSearch /></Button>
+                <Button type="action-danger" icon size="xl"><IconSearch /></Button>
                 
-                <button className='btn action-danger'>Regular</button>
-                <button className='btn action-danger md'> md</button>
-                
-                <button className='btn action-danger lg'> lg</button>
-                <button className='btn action-danger xl'> xl</button>
-                <button className='btn action-danger icon md'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-danger icon lg'>
-                    <IconSearch />
-                </button>
-                <button className='btn action-danger icon xl'>
-                    <IconSearch />
-                </button>
+            
             </div>
           </div>
         </section>
