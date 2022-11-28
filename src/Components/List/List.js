@@ -41,7 +41,7 @@ const List = () => {
         <div className="list-title">Title here
           </div>
         <div className="item-checkbox group" data-state="acctive">
-          <div className="list-label" data-item="group">
+          <div className="list-label">
           <span>A</span> -- <span>Z</span>
           </div>
         </div>
@@ -51,16 +51,12 @@ const List = () => {
         <div  className="list-title">Title here
           </div>
         <div className="item-checkbox" data-state="">
-          <div className="list-label" data-item="group">
+          <div className="list-label">
           <span>A</span> --<span>Z</span>
           </div>
         </div>
       </li>
-      <li className="list-item group" data-state="" tabIndex={5}> 
-        <div  className="list-title">Title here
-          </div>
-        <div> <input type="checkbox"  className='h-5 aspect-square' /></div>
-      </li>
+      
       
     </ul>
     <h2>Checkbox </h2>
@@ -69,7 +65,7 @@ const List = () => {
     </div>
     <hr/>
     <div className="item-checkbox" data-state="">
-          <div className="list-label" data-item="group">
+          <div className="list-label">
           <span>A</span> --<span>Z</span>
           </div>
     </div>
