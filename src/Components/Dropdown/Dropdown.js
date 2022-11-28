@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import IconCheckmark from '../../Icons/IconCheckmark';
 import { NavLink } from 'react-router-dom';
-import './Dropdown.scss';
+import './dropdown.scss';
 import IconsCaretDown from '../../Icons/IconsCaretDown';
 
 const Dropdown = () => {
