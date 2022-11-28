@@ -25,5 +25,19 @@
                 @apply block;
             }
         }
+        &-toggle {
+            &:has( svg ) {
+                @apply flex gap-1 items-center;
+                &[data-dropdown='open']{
+                    @apply shadow-md;
+                    > svg {
+                        @apply origin-center rotate-180;         
+                    }
+            }
+          }
+         }
+        //  .dropdown-toggle end 
     }
+
+    
 }

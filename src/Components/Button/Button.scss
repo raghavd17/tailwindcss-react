@@ -1,197 +1,325 @@
 @tailwind components;
 @layer components {
-    .button {
-      
-        @apply p-1 px-3 rounded bg-transparent transition-all text-sm focus:outline-1 border inline-flex place-content-center place-items-center gap-1;
-        @apply border-none text-primary-600;
-        @apply hover:text-primary-400 hover:bg-primary-200 hover:shadow-md;
-        &:disabled{
-            @apply opacity-25 pointer-events-none;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-primary-400 bg-primary-200 shadow-md;
-            > svg {
-              @apply origin-center rotate-180;
-              
-            }
-          }
-        }
-      &[data-button='primary'] {
-        @apply bg-primary-700 text-white;
-        @apply hover:bg-primary-500;
+  @mixin button() {
+    --btn-bg:var(--color-transparent);
+    --btn-color:var(--color-primary-600);
+    --btn-border-color:var(--color-transparent);
+    --btn-height-sm: 24px;
+    --btn-height: 32px;
+    --btn-height-md: 36px;
+    --btn-height-lg: 40px;
+    --btn-height-xl: 48px;
+    --btn-radius: theme('borderRadius.DEFAULT');
+    --btn-padding:theme('padding.1') theme('padding.4') ;
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    border-color: var(--btn-border-color);
+    padding: var(--btn-padding);
+    height:var(--btn-height);
+    border-radius: var(--btn-radius);
+    @apply transition-all text-sm focus:outline-1 inline-flex place-content-center place-items-center gap-1;
+    @apply hover:shadow-md;
+    &:hover {
+    --btn-bg:var(--color-primary-200);
+    --btn-color:var(--color-primary-400);
+    }
+    &:where(&:active, &.active, &:focus) {
+      --btn-bg:var(--color-primary-200);
+    }
+    &:disabled{
+        @apply opacity-30 pointer-events-none;
+    }
     
-        &:where(&:active, &.active, &:focus) {
-            @apply bg-primary-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-primary-900 text-white;
+  }
+  // .btn mixin 
+    
+     .btn { 
+      @include button();
+      &.primary {
+        --btn-bg:var(--color-primary-700);
+        --btn-color:var(--color-white);
+        &:hover {
+          --btn-bg:var(--color-primary-500);
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-primary-900);
+          }
       }
-      &[data-button='action'] {
-        @apply bg-action-400 text-white;
-        @apply hover:bg-action-300;
+      // .primary style end 
+      
+      &.action {
+        --btn-bg:var(--color-action-400);
+        --btn-color:var(--color-white);
+        &:hover {
+          --btn-bg:var(--color-action-300);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-action-600);
+          }
+      }
+      // .btn.action end 
+  
+      &.action-success {
+        --btn-bg:var(--color-success-500);
+        --btn-color:var(--color-white);
+        &:hover {
+          --btn-bg:var(--color-success-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-success-900);
+          }
+        
+        // @apply bg-success-500 text-white;
+        
+        // &:where(:active, .active, :focus) {
+        //     @apply bg-success-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-success-900 text-white;
+        //   }
+        // }
+      }
+      // .btn.action-success end 
+      &.action-warning {
+        --btn-bg:var(--color-attention-500);
+        --btn-color:var(--color-white);
+        &:hover {
+          --btn-bg:var(--color-attention-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-attention-900);
+          }
 
-        
-        &:where(:active, .active, :focus) {
-            @apply bg-action-600;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-action-600 text-white;
-          }
-        }
-        
+
+        // @apply bg-attention-500 text-white;
+        // &:where(:active, .active, :focus) {
+        //     @apply bg-attention-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-attention-900 text-white;
+        //   }
+        // }
       }
+      // .btn.action-warning end 
   
-      &[data-button='action-success'] {
-        @apply bg-success-500 text-white;
+      &.action-danger {
+
+        --btn-bg:var(--color-error-500);
+        --btn-color:var(--color-white);
+        &:hover {
+          --btn-bg:var(--color-error-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-error-900);
+          }
         
-        &:where(:active, .active, :focus) {
-            @apply bg-success-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-success-900 text-white;
-          }
-        }
-      }
-      &[data-button='action-warning'] {
-        @apply bg-attention-500 text-white;
-        &:where(:active, .active, :focus) {
-            @apply bg-attention-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-attention-900 text-white;
-          }
-        }
-      }
-  
-      &[data-button='action-danger'] {
-        @apply bg-error-500 text-white;
+        // @apply bg-error-500 text-white;
         
-        &:where(:active, .active, :focus) {
-            @apply bg-error-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-error-900 text-white;
-          }
-        }
+        // &:where(:active, .active, :focus) {
+        //     @apply bg-error-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-error-900 text-white;
+        //   }
+        // }
       }
+      // .btn.action-danger end 
       
   
-      &[data-button='danger'] {
-        @apply text-error-500;
-        @apply hover:text-error-900 hover:bg-error-100;
+      &.danger {
+        --btn-color:var(--color-error-500);
+        &:hover {
+          --btn-bg:var(--color-error-100);
+          --btn-color:var(--color-error-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-error-100);
+            --btn-color:var(--color-error-900);
+          }
 
-        &:where(:active, .active, :focus) {
-            @apply text-error-900 bg-error-100;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply bg-error-100 text-error-900;
+
+        // @apply text-error-500;
+        // @apply hover:text-error-900 hover:bg-error-100;
+
+        // &:where(:active, .active, :focus) {
+        //     @apply text-error-900 bg-error-100;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply bg-error-100 text-error-900;
+        //   }
+        // }
+      }
+      // .btn.danger end 
+  
+      &.success {
+        --btn-color:var(--color-success-500);
+        &:hover {
+          --btn-bg:var(--color-success-100);
+          --btn-color:var(--color-success-900);
           }
-        }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-success-100);
+            --btn-color:var(--color-success-900);
+          }
+
+        // @apply text-success-500;
+        // @apply hover:text-success-900 hover:bg-success-100;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-success-900 bg-success-100;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply text-success-900 bg-success-100;
+        //   }
+        // }
+      }
+      // .btn.success end 
+      &.warning {
+        --btn-color:var(--color-attention-500);
+        &:hover {
+          --btn-bg:var(--color-attention-100);
+          --btn-color:var(--color-attention-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-bg:var(--color-attention-100);
+            --btn-color:var(--color-attention-900);
+          }
+        // @apply text-attention-500;
+        // @apply hover:text-attention-900 hover:bg-attention-100;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-attention-900 bg-attention-100;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply text-attention-900 bg-attention-100;
+        //   }
+        // }
+      }
+      // .btn.warning
+      // &.link {
+        &[class*='link']{
+          --btn-color:var(--color-primary-600);
+          --btn-bg:var(--color-transparent);
+        &:hover {
+          --btn-color:var(--color-primary-400);
+          --btn-border-color:var(--color-primary-400);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:var(--color-primary-600);
+            --btn-border-color:var(--color-primary-400);
+          }
+
+        @apply shadow-none border-b rounded-none p-1 py-0;
+        // @apply  hover:border-b-primary-400 p-1 py-0;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-primary-600 border-b-primary-400;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply text-primary-600 border-b-primary-400;
+        //   }
+        // }
+      }
+      // .btn.link end 
+  
+      &.link-danger {
+        --btn-color:var(--color-error-500);
+        &:hover {
+          --btn-color:var(--color-error-900);
+          --btn-border-color:var(--color-error-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:var(--color-error-900);
+            --btn-border-color:var(--color-error-900);
+          }
+        // @apply text-error-500;
+        // @apply hover:text-error-900 hover:border-b-error-900;
+          
+        // &:where(:active, .active, :focus) {
+        //     @apply text-error-900 border-b-error-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply  text-error-900;
+        //   }
+        // }
+      }
+      // .btn.link-danger end 
+  
+      &.link-success {
+
+        --btn-color:var(--color-success-500);
+        &:hover {
+          --btn-color:var(--color-success-900);
+          --btn-border-color:var(--color-success-900);
+          }
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:var(--color-success-900);
+            --btn-border-color:var(--color-success-900);
+          }
+        
+        // @apply text-success-500;
+        // @apply hover:text-success-900 hover:border-b-success-900;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-success-900 border-b-success-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply  text-success-900;
+        //   }
+        // }
       }
   
-      &[data-button='success'] {
-        @apply text-success-500;
-        @apply hover:text-success-900 hover:bg-success-100;
-        &:where(:active, .active, :focus) {
-            @apply text-success-900 bg-success-100;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-success-900 bg-success-100;
+      &.link-warning {
+
+        --btn-color:var(--color-attention-500);
+        &:hover {
+          --btn-color:var(--color-attention-900);
+          --btn-border-color:var(--color-attention-900);
           }
-        }
-      }
-  
-      &[data-button='warning'] {
-        @apply text-attention-500;
-        @apply hover:text-attention-900 hover:bg-attention-100;
-        &:where(:active, .active, :focus) {
-            @apply text-attention-900 bg-attention-100;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-attention-900 bg-attention-100;
+          &:where(&:active, &.active, &:focus), &[data-dropdown='open'] {
+            --btn-color:var(--color-attention-900);
+            --btn-border-color:var(--color-attention-900);
           }
-        }
-      }
-  
-      &[data-button*='link'] {
-        @apply shadow-none bg-transparent text-primary-600;
-        @apply  hover:underline  hover:underline-offset-8 hover:outline-primary-400;
-        &:where(:active, .active, :focus) {
-            @apply text-primary-600 underline underline-offset-8 outline-primary-400;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply text-primary-600 underline underline-offset-8 outline-primary-400 bg-none;
-          }
-        }
-      }
-  
-      &[data-button*='link-danger'] {
-        @apply text-error-500;
-        @apply hover:text-error-900;
-        &:where(:active, .active, :focus) {
-            @apply text-error-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply  text-error-900;
-          }
-        }
-      }
-  
-      &[data-button*='link-success'] {
-        @apply text-success-500;
-        @apply hover:text-success-900;
-        &:where(:active, .active, :focus) {
-            @apply text-success-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply  text-success-900;
-          }
-        }
-      }
-  
-      &[data-button*='link-warning'] {
-        @apply text-attention-500;
-        @apply hover:text-attention-900;
-        &:where(:active, .active, :focus) {
-            @apply text-attention-900;
-        }
-        &[data-dropdown='open']{
-          &.dropdown-toggle {
-            @apply  text-attention-900;
-          }
-        }
+        
+        // @apply text-attention-500;
+        // @apply hover:text-attention-900 hover:border-b-attention-900;
+        // &:where(:active, .active, :focus) {
+        //     @apply text-attention-900 border-b-attention-900;
+        // }
+        // &[data-dropdown='open']{
+        //   &.dropdown-toggle {
+        //     @apply  text-attention-900;
+        //   }
+        // }
       }
         &.xs {
+          --btn-height:var(--btn-height-sm);
             @apply text-xs;
         }
-        &.lg {
+        &.md {
+          --btn-height:var(--btn-height-md);
             @apply text-lg;
         }
-        &.xl {
-            @apply text-xl;
+        &.lg {
+          --btn-height:var(--btn-height-lg);
+          @apply text-2xl;
         }
-        &.xxl {
-            @apply text-2xl;
+        &.xl {
+          --btn-height:var(--btn-height-xl);
+          @apply text-3xl;
         }
         &.icon {
-            @apply p-0 aspect-square w-fit min-w-[1.6667em] grid place-content-center place-items-center;
+          --btn-padding: 0rem;
+            @apply aspect-square w-fit min-w-[1.6667em] grid place-content-center place-items-center;
+            padding: var(--btn-padding);
         }
         &.round {
-            @apply rounded-full;
+          --btn-radius:theme('borderRadius.full');
         }
   
     }

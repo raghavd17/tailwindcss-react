@@ -4,13 +4,13 @@
     .list {
         @apply p-2;
 
-        :where([data-item='group']) {
-            @apply flex items-center gap-2;
-            --gap: theme('spacing.2');
-            gap: var(--gap);
-        }
-
         &-item {
+            &:is(.group){
+                --gap: theme('spacing.2');
+                gap: var(--gap);
+                @apply flex items-center gap-2 justify-between;
+            }
+            
             @apply p-2 px-3 hover:bg-primary-200;
 
             &[data-state="active"] {
@@ -19,8 +19,8 @@
 
             &:hover {
                 .item-checkbox:not([data-state='active']) {
-                    --bg: theme('colors.primary.500');
-                    --color: theme('colors.white');
+                    --bg: var(--color-primary-500);
+                    --color: var(--color-white);
                 }
             }
         }
@@ -31,14 +31,15 @@
         }
 
         &-title {
-            @apply text-ellipsis overflow-hidden whitespace-nowrap flex-grow;
+            @apply text-ellipsis overflow-hidden whitespace-nowrap;
         }
         
 
         &-label {
             --gap: theme('spacing.1');
-            @apply text-[85%];
+            @apply text-[.875em] p-1 flex;
         }
+        
 
         // list-label 
     }
@@ -51,29 +52,29 @@
         // item-link end 
 
         &-checkbox {
+            --bg: var(--color-primary-200);
+            --color: var(--color-primary-600);
+            background:var(--bg);
+            color: var(--color);
             &:has(svg) {
                 @apply aspect-square;
     
                 & svg {
-                    @apply aspect-square text-transparent w-[1em];
+                    @apply  text-[rgba(255,255,255,.25)] ;
                 }
             }
     
-            --bg:theme('colors.primary.200');
-            --color:theme('colors.primary.600');
-            background:var(--bg);
-            color: var(--color);
-            @apply p-1 py-[2px] min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
+            
+            @apply min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
     
             &:hover {
-                --bg: theme('colors.primary.500');
-                --color: theme('colors.white');
+                --bg: var(--color-primary-500);
+                --color: var(--color-white);
             }
     
             &[data-state='active'] {
-                --bg: theme('colors.primary.900');
-                --color: theme('colors.white');
-    
+                --bg:  var(--color-primary-900);
+                --color: var(--color-white);
                 & svg {
                     @apply text-inherit;
                 }
