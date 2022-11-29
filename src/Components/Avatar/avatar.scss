@@ -45,19 +45,23 @@
   .avatar {
     @apply inline-flex items-center justify-center drop-shadow-md self-center gap-[.5em];
     font-size: var(--avatar-fs);
-    // border-radius: var(--avatar-radi);
-    // background: var(--avatar-bg);
 
-    >img {
+    > picture img, > &-media img {
       @apply max-w-full object-cover shadow-2xl;
       border-radius: var(--avatar-radi);
       width: var(--avatar-size);
     }
 
-    &:has(> img) {
+    &:has(> picture, &-media) {
       &[data-avatar]:before {
         @apply hidden;
       }
+    }
+    &-title {
+     line-height: 1.2;
+    }
+    &-desc {
+      font-size: .875em;
     }
 
     &[data-avatar]:before {
