@@ -27,7 +27,8 @@
 
         // list-item
         &-divider {
-            @apply border-neutral-300 border-b my-3;
+            @apply border-b my-3;
+            border-color:var(--color-border, initial);
         }
 
         &-title {
