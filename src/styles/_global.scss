@@ -54,6 +54,8 @@
   --color-neutrals-white-850: theme(colors.neutrals.white.850);
   --color-neutrals-white-900: theme(colors.neutrals.white.900);
   --color-white: theme(colors.white);
+  --color-border-default: theme('borderColor.neutral.300');
+  --color-border: var(--color-border-default);
   --color-transparent: theme(colors.transparent);
   --space: theme(space.4);
   --header-index: theme(zIndex.10);
