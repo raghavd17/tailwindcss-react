@@ -29,13 +29,11 @@ const Search = () => {
           </div>
         </div>
       </li>
-      <li className='list-divider'></li>
+      <li className='list-divider border-secondary-400'></li>
       <li className="list-item group" data-state="" tabIndex={1}> 
-        <div  className="list-title">Title here
-          </div>
-        <div className="item-checkbox" data-state="">
-          <div className="list-label">
-          <span>A</span> --<span>Z</span>
+        <div className="list-title">
+          <div className='avatar'>
+            
           </div>
         </div>
       </li>
