@@ -43,7 +43,7 @@
   }
 
   .avatar {
-    @apply flex items-center justify-center drop-shadow-md self-center gap-[.5em];
+    @apply flex items-center drop-shadow-md self-center gap-[.5em];
     font-size: var(--avatar-fs);
 
     > picture img, > &-media img {
