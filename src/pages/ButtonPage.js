@@ -469,28 +469,73 @@ const ButtonPage = () => {
         {/* Action Danger Buttons end  */}
 
         <section className='grid grid-cols-2 border-b-2 border-b-neutral-400 py-5'>
-          <div>
+          <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Group</h1>
-            <div className='btn-group md' role="group">
-                <Button type="primary">Button Left</Button>
-                <Button type="primary">Button Center</Button>
-                <Button type="primary">Button Right</Button>
+            <div class="cluster">
+            <div className='btn-group' role="group">
+                <Button type="primary">Button </Button>
+                <Button type="primary">Button </Button>
+                <Button type="primary">Button </Button>
+                <Button type="primary">Button </Button>
+
+            </div>
             </div>
           </div>
           <div>
-            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group Round  </h1>
-            <div className='btn-group round lg' role="group">
-                <Button type="primary">Button Left</Button>
-                <Button type="primary"> Button Center</Button>
-                <Button type="primary">Button Right</Button>
+            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group Size & Round  </h1>
+            <div className='stack'>
+            <div className='cluster'>
+              <div className='btn-group sm' role="group">
+                  <Button type="primary"> sm</Button>
+                  <Button type="primary"> sm</Button>
+                  <Button type="primary"> sm</Button>
+              </div>
+              <div className='btn-group md' role="group">
+                  <Button type="primary"> md</Button>
+                  <Button type="primary"> md</Button>
+                  <Button type="primary"> md</Button>
+              </div>
+              <div className='btn-group lg' role="group">
+                  <Button type="primary"> lg</Button>
+                  <Button type="primary"> lg</Button>
+                  <Button type="primary"> lg</Button>
+              </div>
+              <div className='btn-group xl' role="group">
+                  <Button type="primary"> xl</Button>
+                  <Button type="primary"> xl</Button>
+                  <Button type="primary"> xl</Button>
+              </div>
+            </div>
+            <div className='cluster'>
+              <div className='btn-group round sm' role="group">
+                  <Button type="primary"> sm</Button>
+                  <Button type="primary"> sm</Button>
+                  <Button type="primary"> sm</Button>
+              </div>
+              <div className='btn-group round md' role="group">
+                  <Button type="primary"> md</Button>
+                  <Button type="primary"> md</Button>
+                  <Button type="primary"> md</Button>
+              </div>
+              <div className='btn-group round lg' role="group">
+                  <Button type="primary"> lg</Button>
+                  <Button type="primary"> lg</Button>
+                  <Button type="primary"> lg</Button>
+              </div>
+              <div className='btn-group round xl' role="group">
+                  <Button type="primary"> xl</Button>
+                  <Button type="primary"> xl</Button>
+                  <Button type="primary"> xl</Button>
+              </div>
+            </div>
             </div>
           </div>
         
         </section>
         {/* Group Buttons end  */}
         <section className='grid grid-cols-2 border-b-2 border-b-neutral-400 py-5'>
-          <div>
-            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group</h1>
+          <div className='stack'>
+            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group With Icon</h1>
             <div className='btn-group' role="group">
                 <Button type="primary" icon><IconSearch /></Button>    
                 <Button type="primary">Button Left</Button>
@@ -499,14 +544,51 @@ const ButtonPage = () => {
                 <Button type="primary" icon><IconSearch /></Button>    
             </div>
           </div>
-          <div>
-            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group Round  </h1>
-            <div className='btn-group round' role="group">
-                <Button type="primary" icon><IconSearch /></Button>    
-                <Button type="primary">Button Left</Button>
-                <Button type="primary"> Button Center</Button>
-                <Button type="primary">Button Right</Button>
-                <Button type="primary" icon><IconSearch /></Button>    
+          <div className='stack'>
+            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group Size Round with Icon </h1>
+            <div className='cluster'>
+              <div className='btn-group sm' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> sm</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+              <div className='btn-group md' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> md</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+              <div className='btn-group lg' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> lg</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+              <div className='btn-group xl' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> xl</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+            </div>
+            <div className='cluster'>
+              <div className='btn-group round sm' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> sm</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+              <div className='btn-group round md' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> md</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+              <div className='btn-group round lg' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> lg</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
+              <div className='btn-group round xl' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button> 
+                  <Button type="primary"> xl</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>
+              </div>
             </div>
           </div>
         
@@ -514,31 +596,62 @@ const ButtonPage = () => {
         {/* Group Buttons end  */}
 
         <section className='grid grid-cols-2 border-b-2 border-b-neutral-400 py-5'>
-          <div>
+          <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Group With Split</h1>
+            <div className='stack'>
             <div className='cluster'>
               <div className='btn-group' role="group">
                 <Button type="primary" icon split><IconSearch /></Button> 
                 <Button type="primary">Button Split</Button>       
               </div>
               <div className='btn-group' role="group">
-                  <Button type="primary">Button Split</Button>
+                  <Button type="primary">Button Split</Button>       
                   <Button type="primary" icon split><IconSearch /></Button>    
               </div>
             </div>
+            </div>
           </div>
           <div>
-            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group Round Split </h1>
+          
+            <h1 className='text-2xl text-neutral-800 mb-3'>Button Group Size & Round Split </h1>
+            <div className='stack'>
             <div className='cluster'>
-              <div className='btn-group round' role="group">
+              <div className='btn-group sm' role="group">
                 <Button type="primary" icon split><IconSearch /></Button> 
                 <Button type="primary">Button Split</Button>       
               </div>
-              <div className='btn-group round' role="group">
+              <div className='btn-group md' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button>
                   <Button type="primary">Button Split</Button>
-                  <Button type="primary" icon split><IconSearch /></Button>    
-                  
               </div>
+              <div className='btn-group lg' role="group">
+                  <Button type="primary" icon split><IconSearch /></Button>        
+                  <Button type="primary">Button Split</Button>
+              </div>
+              <div className='btn-group xl' role="group">
+              <Button type="primary" icon split><IconSearch /></Button>        
+              <Button type="primary">Button Split</Button>    
+              </div>
+            </div>
+            <div className='cluster'>
+              <div className='btn-group round sm' role="group">
+                <Button type="primary">Button Split</Button>
+                <Button type="primary" icon split><IconSearch /></Button> 
+              </div>
+              <div className='btn-group round md' role="group">
+                  <Button type="primary">Button Split</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>        
+              </div>
+              <div className='btn-group round lg' role="group">
+                  <Button type="primary">Button Split</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>        
+              </div>
+              <div className='btn-group round xl' role="group">
+                  <Button type="primary">Button Split</Button>
+                  <Button type="primary" icon split><IconSearch /></Button>        
+              </div>
+            </div>
+            
             </div>
           </div>
         
