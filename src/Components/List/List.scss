@@ -11,7 +11,7 @@
                 @apply flex items-center gap-2 justify-between;
             }
             
-            @apply p-2 px-3 hover:bg-primary-200;
+            @apply p-2 px-3 hover:bg-primary-200 rounded;
 
             &[data-state="active"] {
                 @apply bg-primary-100;
@@ -27,7 +27,7 @@
 
         // list-item
         &-divider {
-            @apply border-b my-3;
+            @apply border-b my-[.5em];
             border-color:var(--color-border, initial);
         }
 
