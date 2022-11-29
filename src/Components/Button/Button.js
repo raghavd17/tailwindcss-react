@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './button.scss';
 
-const Button = ({children, active, disabled, icon, round, size, type, dropdownToggle}) => {
+const Button = ({children, active, disabled, icon, round, size, type, dropdownToggle, split}) => {
 
     const styles = () => {
         return classNames(
@@ -13,7 +13,8 @@ const Button = ({children, active, disabled, icon, round, size, type, dropdownTo
             icon && "icon",
             active && "active",
             size,
-            dropdownToggle && "dropdown-toggle"
+            dropdownToggle && "dropdown-toggle",
+            split && "split"
             
         );
     }
