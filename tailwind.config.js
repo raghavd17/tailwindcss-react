@@ -79,8 +79,19 @@ module.exports = {
           }
         },
         'white': '#fff'
+      },
+      screens: {
+        '2xl': '1600px',
       }
     }
   },
-  plugins: [],
+  plugins: [function ({ addComponents }) {
+    addComponents({
+      '.container': {
+        '@screen 2xl': {
+          maxWidth: '90%',
+        },
+      }
+    })
+  }],
 }

@@ -2,16 +2,16 @@
 
 @layer components {
     .list {
-        @apply p-2;
+        @apply p-2 grid gap-2;
 
         &-item {
-            &:is(.group){
+            &:is(.group) {
                 --gap: theme('spacing.2');
                 gap: var(--gap);
                 @apply flex items-center gap-2 justify-between;
             }
-            
-            @apply p-2 px-3 hover:bg-primary-200;
+
+            @apply p-2 px-3 hover:bg-primary-200 rounded;
 
             &[data-state="active"] {
                 @apply bg-primary-100;
@@ -23,24 +23,26 @@
                     --color: var(--color-white);
                 }
             }
+
         }
+
 
         // list-item
         &-divider {
-            @apply border-b my-3;
-            border-color:var(--color-border, initial);
+            @apply border-b;
+            border-color: var(--color-border, initial);
         }
 
         &-title {
             @apply text-ellipsis overflow-hidden whitespace-nowrap;
         }
-        
+
 
         &-label {
             --gap: theme('spacing.1');
             @apply text-[.875em] p-1 flex;
         }
-        
+
 
         // list-label 
     }
@@ -50,39 +52,42 @@
         &-link {
             @apply block hover:text-primary-500;
         }
+
         // item-link end 
 
         &-checkbox {
             --bg: var(--color-primary-200);
             --color: var(--color-primary-600);
-            background:var(--bg);
+            background: var(--bg);
             color: var(--color);
+
             &:has(svg) {
                 @apply aspect-square;
-    
+
                 & svg {
                     @apply  text-[rgba(255,255,255,.25)] ;
                 }
             }
-    
-            
+
+
             @apply min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
-    
+
             &:hover {
                 --bg: var(--color-primary-500);
                 --color: var(--color-white);
             }
-    
+
             &[data-state='active'] {
-                --bg:  var(--color-primary-900);
+                --bg: var(--color-primary-900);
                 --color: var(--color-white);
+
                 & svg {
                     @apply text-inherit;
                 }
             }
         }
     }
-    
+
 
     // .item-checkbox
 
