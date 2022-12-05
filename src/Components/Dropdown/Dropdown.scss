@@ -1,6 +1,7 @@
 @tailwind components;
 
 @layer components {
+
     .dropdown {
         &[data-state="open"] {
            @apply outline outline-neutral-100; 
@@ -21,9 +22,6 @@
             background: var(--bg);
             @apply absolute border border-neutral-100 shadow-xl p-2 py-4 rounded hidden z-50;
 
-            &[data-state="open"] {
-                @apply block;
-            }
         }
         &-toggle {
             &:has( svg ) {
@@ -33,11 +31,17 @@
                     > svg {
                         @apply origin-center rotate-180;         
                     }
-            }
+                    + .dropdown-menu  {
+                        @apply block;
+                    }
+                }
+                // data-dropdown='open' end
           }
          }
         //  .dropdown-toggle end 
     }
+
+   
 
     
 }

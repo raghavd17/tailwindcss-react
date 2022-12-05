@@ -21,7 +21,8 @@ const Dropdown = () => {
       <span>Open Dropdown</span>
     <IconsCaretDown />
     </button> */}
-      <div className='dropdown-menu' data-state={`${isVisible?"open": ""}`}>
+      {/* <div className='dropdown-menu' data-state={`${isVisible?"open": ""}`}> */}
+      <div className='dropdown-menu'>
         <ul className="list">
           <li className="list-item" tabIndex={1}>
             <NavLink key={1}  className="item-link"> Link item here </NavLink>
